@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSCBarkodPrinter", "TSCBarkodPrinter\TSCBarkodPrinter.csproj", "{6B76AEDC-4A1A-44A2-B69D-53F0D545CCCC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B76AEDC-4A1A-44A2-B69D-53F0D545CCCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B76AEDC-4A1A-44A2-B69D-53F0D545CCCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B76AEDC-4A1A-44A2-B69D-53F0D545CCCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B76AEDC-4A1A-44A2-B69D-53F0D545CCCC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6ACD4D31-B219-4078-A60C-38E2E395E443}
+	EndGlobalSection
+EndGlobal
