@@ -51,16 +51,45 @@ namespace TSCBarkodPrinter
         {
             string printerName = "TSC TTP-244CE"; // Yazıcının tam adı
 
-            string tsplCommand = @"SIZE 100 mm, 50 mm
-GAP 3 mm, 0 mm
-DIRECTION 1
-REFERENCE 0,0
-CLS
-TEXT 100,30,""3"",0,1,1,""Koçaklar Market""
-TEXT 100,70,""3"",0,1,1,""Eski Fiyat: 10 TL""
-TEXT 100,110,""3"",0,2,2,""Sikişirim senle""
-PRINT 1
-                        ";
+            //string tsplCommand = $@"
+            //        SIZE 100 mm, 75 mm
+            //        GAP 3 mm, 0 mm
+            //        DIRECTION 1
+            //        REFERENCE 0,0
+            //        CLS
+            //        TEXT 100,130,""3"",0,2,2,""KOCAKLAR MARKET""
+            //        TEXT 100,180,""3"",0,2,2,""Ürün: {txturunad.Text}""
+            //        TEXT 100,220,""3"",0,2,2,""Eski Fiyat: {txteskifiyat.Text} TL""
+            //        TEXT 100,260,""3"",0,2,2,""YENİ FİYAT: {txtyenifiyat.Text} TL""
+            //        PRINT 1
+            //        ";
+
+            //MAİN
+            //string tsplCommand = $@"
+            //        SIZE 100 mm, 75 mm
+            //        GAP 3 mm, 0 mm
+            //        DIRECTION 0
+            //        REFERENCE 0,0
+            //        CLS
+            //        TEXT 100,290,""3"",0,2,2,""YENİ FİYAT: {txtyenifiyat.Text} TL""
+            //        TEXT 100,240,""3"",0,2,2,""ESKİ FİYAT: {txteskifiyat.Text} TL""
+            //        TEXT 100,190,""3"",0,2,2,""URUN: {txturunad.Text}""
+            //        TEXT 100,140,""3"",0,2,2,""KOCAKLAR MARKET""
+            //        PRINT 1
+            //        ";
+            string tsplCommand = $@"
+                    SIZE 100 mm, 75 mm
+                    GAP 3 mm, 0 mm
+                    DIRECTION 0
+                    REFERENCE 0,0
+                    CLS
+                    TEXT 100,290,""3"",0,2,2,""YENİ FİYAT: {txtyenifiyat.Text} TL""
+                    TEXT 100,240,""3"",0,2,2,""ESKİ FİYAT: {txteskifiyat.Text} TL""
+                    LINE 100,240,500,240,5  // Eski fiyatın üstünü çizmek için yatay çizgi
+                    TEXT 100,190,""3"",0,2,2,"" {txturunad.Text}""
+                    TEXT 100,100,""3"",0,2,2,""KOCAKLAR MARKET""
+                    PRINT {numericUpDown1.Value.ToString()}
+                    ";
 
             bool result = RawPrinterHelper.SendStringToPrinter(printerName, tsplCommand);
 

@@ -67,7 +67,7 @@ namespace TSCBarkodPrinter
                            EndPagePrinter(hPrinter) &&
                            EndDocPrinter(hPrinter);
 
-            ClosePrinter(hPrinter);
+            //ClosePrinter(hPrinter);
             return success;
         }
     }
